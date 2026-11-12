@@ -1,19 +1,30 @@
 
 :root {
-  --color-primary: #426b58;
-  --color-primary-dark: #263d32;
-  --color-sage: #dde8df;
-  --color-cream: #f8f8f4;
-  --color-white: #ffffff;
-  --color-text: #303b34;
-  --color-muted: #788078;
+  /* Paleta corporativa Medipiel */
+  --color-primary: #60361F;
+  --color-primary-dark: #4C2A17;
+  --color-background: #FFFAF4;
+  --color-surface: #FEFBF4;
+  --color-beige: #D7C5BA;
+  --color-nude: #C3A089;
+  --color-text: #4C2A17;
+  --color-text-secondary: #80685A;
+  --color-border: #D7C5BA;
+  --color-button: #60361F;
+  --color-button-hover: #4C2A17;
+
+  /* Alias conservados para los componentes existentes */
+  --color-sage: var(--color-beige);
+  --color-cream: var(--color-background);
+  --color-white: var(--color-surface);
+  --color-muted: var(--color-text-secondary);
 
   --font-main: 'Inter', sans-serif;
   --font-heading: 'Playfair Display', serif;
 
   --container: 1200px;
   --radius: 14px;
-  --shadow: 0 10px 35px rgba(38, 61, 50, 0.08);
+  --shadow: 0 10px 35px rgba(76, 42, 23, 0.10);
 }
 
 * {
@@ -29,7 +40,7 @@ html {
 body {
   font-family: var(--font-main);
   color: var(--color-text);
-  background: var(--color-white);
+  background: var(--color-background);
   line-height: 1.6;
 }
 
@@ -71,14 +82,14 @@ img {
   align-items: center;
   padding: 14px 27px;
   border-radius: 50px;
-  background: var(--color-primary);
-  color: white;
+  background: var(--color-button);
+  color: var(--color-surface);
   font-weight: 600;
   transition: .25s ease;
 }
 
 .btn:hover {
-  background: var(--color-primary-dark);
+  background: var(--color-button-hover);
   transform: translateY(-2px);
 }
 
@@ -89,14 +100,14 @@ img {
 }
 
 .btn-outline:hover {
-  color: white;
+  color: var(--color-surface);
 }
 
 /* Topbar */
 
 .topbar {
   background: var(--color-primary-dark);
-  color: white;
+  color: var(--color-surface);
   padding: 9px 0;
   font-size: 12px;
 }
@@ -110,8 +121,8 @@ img {
 /* Header */
 
 .header {
-  background: white;
-  border-bottom: 1px solid #edf0ec;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -161,6 +172,7 @@ img {
   border: 0;
   font-size: 25px;
   cursor: pointer;
+  color: var(--color-primary-dark);
 }
 
 /* Hero */
@@ -247,7 +259,7 @@ img {
 }
 
 .service-card {
-  background: white;
+  background: var(--color-surface);
   padding: 32px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -284,7 +296,7 @@ img {
 }
 
 .product-card {
-  border: 1px solid #edf0ec;
+  border: 1px solid var(--color-border);
   border-radius: var(--radius);
   overflow: hidden;
   transition: .25s ease;
@@ -320,7 +332,7 @@ img {
 
 .cta {
   background: var(--color-primary-dark);
-  color: white;
+  color: var(--color-surface);
   text-align: center;
   padding: 75px 20px;
 }
@@ -332,15 +344,15 @@ img {
 }
 
 .cta p {
-  color: #d5dfd7;
+  color: var(--color-surface);
   margin-bottom: 25px;
 }
 
 /* Footer */
 
 .footer {
-  background: #1d3027;
-  color: white;
+  background: var(--color-primary-dark);
+  color: var(--color-surface);
   padding: 65px 0 25px;
 }
 
@@ -357,7 +369,7 @@ img {
 
 .footer p,
 .footer a {
-  color: #c8d1ca;
+  color: var(--color-surface);
   font-size: 14px;
 }
 
@@ -368,10 +380,15 @@ img {
 }
 
 .footer-bottom {
-  border-top: 1px solid #3a4a40;
+  border-top: 1px solid var(--color-nude);
   margin-top: 45px;
   padding-top: 20px;
   text-align: center;
-  color: #c8d1ca;
+  color: var(--color-surface);
   font-size: 12px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-nude);
+  outline-offset: 3px;
 }

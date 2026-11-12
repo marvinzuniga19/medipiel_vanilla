@@ -1,0 +1,76 @@
+
+
+[
+  {
+    "id": "limpiador-facial",
+    "name": "Limpiador Facial",
+    "brand": "Cuidado Dermocosmético",
+    "category": "limpieza-facial",
+    "description": "Limpiador facial para la rutina diaria.",
+    "image": "https://placehold.co/600x600/F1F4EF/426B58?text=Limpiador",
+    "price": 650,
+    "currency": "NIO",
+    "featured": true,
+    "active": true
+  },
+  {
+    "id": "protector-solar",
+    "name": "Protector Solar FPS 50+",
+    "brand": "Cuidado Dermocosmético",
+    "category": "protectores-solares",
+    "description": "Protección solar para uso diario.",
+    "image": "https://placehold.co/600x600/F1F4EF/426B58?text=Protector",
+    "price": 950,
+    "currency": "NIO",
+    "featured": true,
+    "active": true
+  },
+  {
+    "id": "crema-hidratante",
+    "name": "Crema Hidratante",
+    "brand": "Cuidado Dermocosmético",
+    "category": "hidratacion",
+    "description": "Crema hidratante para el cuidado de la piel.",
+    "image": "https://placehold.co/600x600/F1F4EF/426B58?text=Hidratante",
+    "price": 780,
+    "currency": "NIO",
+    "featured": true,
+    "active": true
+  },
+  {
+    "id": "serum-facial",
+    "name": "Sérum Facial",
+    "brand": "Cuidado Dermocosmético",
+    "category": "tratamientos-faciales",
+    "description": "Sérum para complementar la rutina facial.",
+    "image": "https://placehold.co/600x600/F1F4EF/426B58?text=Serum",
+    "price": 850,
+    "currency": "NIO",
+    "featured": false,
+    "active": true
+  },
+  {
+    "id": "agua-micelar",
+    "name": "Agua Micelar",
+    "brand": "Cuidado Dermocosmético",
+    "category": "limpieza-facial",
+    "description": "Solución micelar para la limpieza facial.",
+    "image": "https://placehold.co/600x600/F1F4EF/426B58?text=Micelar",
+    "price": 590,
+    "currency": "NIO",
+    "featured": false,
+    "active": true
+  },
+  {
+    "id": "crema-reparadora",
+    "name": "Crema Reparadora",
+    "brand": "Cuidado Dermocosmético",
+    "category": "hidratacion",
+    "description": "Crema para complementar el cuidado de la piel.",
+    "image": "https://placehold.co/600x600/F1F4EF/426B58?text=Reparadora",
+    "price": 720,
+    "currency": "NIO",
+    "featured": false,
+    "active": true
+  }
+]

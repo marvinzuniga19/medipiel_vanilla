@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://medipiel.invalid/schemas/product.json",
+  "title": "Producto Medipiel",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "brand",
+    "category",
+    "description",
+    "image",
+    "price",
+    "currency",
+    "featured",
+    "active"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "brand": { "type": "string", "minLength": 1 },
+    "category": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "description": { "type": "string", "minLength": 1 },
+    "image": {
+      "type": "string",
+      "minLength": 1,
+      "anyOf": [
+        { "pattern": "^https://" },
+        { "pattern": "^assets/images/(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9._/-]+\\.(?:avif|gif|jpe?g|png|svg|webp)$" }
+      ]
+    },
+    "price": { "type": ["number", "null"], "minimum": 0 },
+    "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+    "featured": { "type": "boolean" },
+    "active": { "type": "boolean" },
+    "stock": { "type": ["string", "null"] }
+  }
+}

@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Catálogo de productos dermatológicos Medipiel.">
+
+  <title>Productos | Medipiel</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        MEDI<span>PIEL</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="especialistas.html">Especialistas</a></li>
+          <li><a href="catalogo.html">Productos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="catalog-hero">
+      <div class="container">
+        <span class="hero-label">Cuidado especializado</span>
+        <h1>Catálogo de productos</h1>
+        <p>
+          Encuentra productos para complementar
+          tu rutina de cuidado de la piel.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="catalog-toolbar">
+
+          <div class="catalog-search">
+            <label for="searchInput">Buscar productos</label>
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Ej. protector solar..."
+            >
+          </div>
+
+          <div class="catalog-filter">
+            <label for="categoryFilter">Categoría</label>
+            <select id="categoryFilter">
+              <option value="">Todas las categorías</option>
+            </select>
+          </div>
+
+          <div class="catalog-filter">
+            <label for="sortFilter">Ordenar por</label>
+            <select id="sortFilter">
+              <option value="default">Destacados</option>
+              <option value="name-asc">Nombre A-Z</option>
+              <option value="price-asc">Precio menor</option>
+              <option value="price-desc">Precio mayor</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="catalog-results">
+          <p id="resultsCount" aria-live="polite">
+            Cargando productos...
+          </p>
+        </div>
+
+        <div id="catalogGrid" class="product-grid"
+             aria-live="polite">
+        </div>
+
+        <div id="pagination" class="pagination"
+             aria-label="Paginación del catálogo">
+        </div>
+
+        <div id="catalogMessage" class="catalog-message"
+             role="status"></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>MEDIPIEL</h3>
+          <p>Clínica dermatológica y cuidado de la piel.</p>
+        </div>
+
+        <div>
+          <h3>Navegación</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="catalogo.html">Productos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contacto</h3>
+          <p>Managua, Nicaragua</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="currentYear"></span> Medipiel.
+        Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
+  <script src="assets/js/catalog.js"></script>
+
+</body>
+</html>

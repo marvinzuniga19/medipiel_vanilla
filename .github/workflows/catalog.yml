@@ -1,0 +1,39 @@
+name: Validate catalog
+
+on:
+  push:
+    paths:
+      - "content/products/**"
+      - "content/categories/**"
+      - "content/products.schema.json"
+      - "content/categories.schema.json"
+      - "scripts/build-catalog.js"
+      - "data/products-index.json"
+      - ".github/workflows/catalog.yml"
+  pull_request:
+    paths:
+      - "content/products/**"
+      - "content/categories/**"
+      - "content/products.schema.json"
+      - "content/categories.schema.json"
+      - "scripts/build-catalog.js"
+      - "data/products-index.json"
+      - ".github/workflows/catalog.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate generated catalog index
+        run: node scripts/build-catalog.js --check
